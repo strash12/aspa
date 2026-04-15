@@ -28,4 +28,5 @@
 - [[Положение 3]] — Оценка канала FRFT-SIC
 
 ## Источники
-- [[Literature Review]] — 18 статей по OTFS fractional delay/Doppler (2025-2026)
+- [[Literature Review]] — 41 статья по OTFS (2021-2026), Google Scholar
+- [[Scientific Novelty]] — анализ научной новизны для диссертации

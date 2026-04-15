@@ -8,4 +8,4 @@
 - [DONE 2026-04-15 21:15] QuaDRiGa-based adaptive guard: Adaptive лучше 7/7 для ВСЕХ сценариев (UMi +18.9%, UMa +8.9%, RMa +20.6%)
 - [DONE 2026-04-15 21:30] Обновление POSITION_1_CONTEXT.md и AI_CONTEXT.md с результатами QuaDRiGa
 - [DONE 2026-04-15 21:35] Визуализация DD-кадра: 4 фигуры (структура, zoom guard, channel smearing, full frame)
-- [START 2026-04-15 21:40] Обновление AI_CONTEXT.md с итогами работы над положением 1
+- [DONE 2026-04-15 21:40] Обновление AI_CONTEXT.md с итогами работы над положением 1

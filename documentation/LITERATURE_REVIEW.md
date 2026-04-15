@@ -16,38 +16,71 @@
 | 4 | **Qi et al., 2025** — "Sparse Bayesian Learning with Adaptive Threshold" | SBL + adaptive threshold | Inverse-free SBL с адаптивным порогом для подавления шума при fractional Doppler |
 | 5 | **Cao et al., 2026** — "Nonparametric Variational Bayesian Learning" | Stick-breaking process | Автоматическое определение числа путей без априорного знания |
 | 6 | **Gehlot et al., 2026** — "Gaussian Mixture Model Based Bayesian Learning" | GMM + SBL | Иерархические GMM-приоры для моделирования сложной статистики замираний |
+| 7 | **Hashimoto et al., 2021** — "Channel estimation and equalization for CP-OFDM-based OTFS in fractional Doppler channels" | Symplectic FFT | Symplectic finite Fourier transform для компенсации fractional Doppler |
+| 8 | **Sheng & Wu, 2023** — "Time-frequency domain channel estimation for OTFS systems" | TF-domain CE | BER почти достигает идеального CSI при TF-оценке |
+| 9 | **Mattu & Chockalingam, 2024** — "Learning in time-frequency domain for fractional delay-Doppler channel estimation in OTFS" | ISF-based learning | Inverse symplectic finite Fourier transform для fractional DD-канала |
+| 10 | **Liu et al., 2021** — "Message passing-based structured sparse signal recovery for estimation of OTFS channels with fractional Doppler shifts" | Message passing + SFSF | Structured sparse recovery через dimensional inverse symplectic FFT |
+| 11 | **Khan & Mohammed, 2021** — "Low complexity channel estimation for OTFS modulation with fractional delay and Doppler" | Pilot-only frame | Упрощённая структура кадра только с пилотами для low-complexity CE |
+| 12 | **Priya et al., 2024** — "OTFS channel estimation and detection for channels with very large delay spread" | Adaptive threshold | Adaptive thresholds для aliased delay estimation при большом delay spread |
+| 13 | **Zheng et al., 2023** — "Gamp-based low-complexity sparse bayesian learning channel estimation for OTFS systems in V2X scenarios" | GAMP + SBL | 3GPP V2X channel model + discrete-time OTFS formulation |
 
 ### 1.2. Дизайн пилотов и кадра
 
 | # | Статья | Метод | Ключевая идея |
 |---|---|---|---|
-| 7 | **Wang & Petropulu, 2025** — "Low Overhead Scalable TF Pilots for MIMO-OTFS" | Virtual array + guard regions | Пилоты в TF-области с guard-зонами → virtual array для sparse recovery |
-| 8 | **Zedka et al., 2026** — "Unique Word Channel Estimation for Oversampled OTFS" | Oversampling + time-domain pilots | Перенос пилотов в oversampled time domain — предотвращает energy leakage от pulse shaping |
-| 9 | **Chen & Su, 2026** — "Low-Complexity Pilot-Aided Doppler Ambiguity Estimation" | Pairwise phase + ML | Разрешение Doppler aliasing через попарные фазовые сравнения |
+| 14 | **Wang & Petropulu, 2025** — "Low Overhead Scalable TF Pilots for MIMO-OTFS" | Virtual array + guard regions | Пилоты в TF-области с guard-зонами → virtual array для sparse recovery |
+| 15 | **Zedka et al., 2026** — "Unique Word Channel Estimation for Oversampled OTFS" | Oversampling + time-domain pilots | Перенос пилотов в oversampled time domain — предотвращает energy leakage от pulse shaping |
+| 16 | **Chen & Su, 2026** — "Low-Complexity Pilot-Aided Doppler Ambiguity Estimation" | Pairwise phase + ML | Разрешение Doppler aliasing через попарные фазовые сравнения |
+| 17 | **Wang et al., 2021** — "Pilot design and optimization for OTFS modulation" | DD-grid config | N=32, M=128 оптимизация DD-сетки для мобильности |
+| 18 | **Karimian-Sichani et al., 2025** — "2D pilot signal design for OTFS-ISAC systems" | Guard band + zero pilots | 2D пилоты с guard band для dual-purpose sensing/communication |
+| 19 | **Wu et al., 2025** — "Superimposed Pilot-Data Co-Design Framework with Buffer Band in OTFS System" | Buffer band replacement | Замена conventional guard bands на active data — joint pilot-data optimization |
+| 20 | **Deng et al., 2025** — "Adaptive OTFS Frame Design and Resource Allocation for High-Mobility LEO Satellite Communications" | Dynamic pilot guard | Динамическая адаптация pilot guard bands для LEO satellite links |
 
 ### 1.3. Pulse shaping и waveform design
 
 | # | Статья | Метод | Ключевая идея |
 |---|---|---|---|
-| 10 | **Jesbin & Chockalingam, 2025** — "DD Pulse Shaping in Zak-OTFS Using Hermite Basis" | Hermite pulse optimization | Оптимизация коэффициентов Hermite-базиса для минимизации ISI при fractional shifts |
-| 11 | **Zhang et al., 2026** — "Pulse Shaping Filter Design for Zak-OTFS" | Specialized waveforms | Синтез вейвлетов для минимизации sidelobe spreading |
-| 12 | **Sanoopkumar et al., 2025** — "Time Frequency Localized Pulse" | Localized pulse design | Подавление интерференции от fractional delays и timing offsets |
-| 13 | **Sun & Jitsumatsu, 2025** — "OTFS Radar with Window Function" | Generalized window + autocorrelation interpolation | Гибкое окно + автокорреляционная интерполяция для radar |
+| 21 | **Jesbin & Chockalingam, 2025** — "DD Pulse Shaping in Zak-OTFS Using Hermite Basis" | Hermite pulse optimization | Оптимизация коэффициентов Hermite-базиса для минимизации ISI при fractional shifts |
+| 22 | **Zhang et al., 2026** — "Pulse Shaping Filter Design for Zak-OTFS" | Specialized waveforms | Синтез вейвлетов для минимизации sidelobe spreading |
+| 23 | **Sanoopkumar et al., 2025** — "Time Frequency Localized Pulse" | Localized pulse design | Подавление интерференции от fractional delays и timing offsets |
+| 24 | **Sun & Jitsumatsu, 2025** — "OTFS Radar with Window Function" | Generalized window + autocorrelation interpolation | Гибкое окно + автокорреляционная интерполяция для radar |
+| 25 | **Khammammetti et al., 2022** — "Spectral efficiency of OTFS based orthogonal multiple access with rectangular pulses" | No guard bands | OTFS-OMA без guard bands в resource assignment |
+| 26 | **Hossain & Ryu, 2021** — "Advanced OTFS communication system with compact spectrum and power efficiency improvement" | Waveform shaping | Waveform shaping для подавления OOB emissions |
+| 27 | **Xu et al., 2023** — "Optical OTFS is capable of improving the bandwidth-, power-and energy-efficiency of optical OFDM" | Single prefix | Consolidation overhead в single prefix per frame |
+| 28 | **Tusha & Arslan, 2023** — "Low complex inter-Doppler interference mitigation for OTFS systems via global receiver windowing" | Unified prefix | Unified extension для лучшей spectral efficiency |
 
 ### 1.4. Deep learning подходы
 
 | # | Статья | Метод | Ключевая идея |
 |---|---|---|---|
-| 14 | **Zhang et al., 2025** — "DL-based OTFS CE with Plug-and-Play" | Optimization + lightweight NN | Адаптивное отслеживание вариаций канала, компенсация fractional Doppler spreading |
-| 15 | **Lei et al., 2026** — "Superimposed-Pilot OTFS Under Fractional Doppler: Modular E2E Learning" | U-Net + modular framework | Joint channel estimation + symbol detection через U-Net |
-| 16 | **Men et al., 2026** — "DL-Based Coarse-to-Fine Frame Synchronization" | Hierarchical ResNet | Классификация timing offsets через периодические пилоты |
+| 29 | **Zhang et al., 2025** — "DL-based OTFS CE with Plug-and-Play" | Optimization + lightweight NN | Адаптивное отслеживание вариаций канала, компенсация fractional Doppler spreading |
+| 30 | **Lei et al., 2026** — "Superimposed-Pilot OTFS Under Fractional Doppler: Modular E2E Learning" | U-Net + modular framework | Joint channel estimation + symbol detection через U-Net |
+| 31 | **Men et al., 2026** — "DL-Based Coarse-to-Fine Frame Synchronization" | Hierarchical ResNet | Классификация timing offsets через периодические пилоты |
+| 32 | **Zhou et al., 2022** — "Learning to equalize OTFS" | NN equalizer | Guard interval free neural network equalizer |
 
-### 1.5. Обзоры
+### 1.5. Spectral efficiency и guard band optimization
+
+| # | Статья | Метод | Ключевая идея |
+|---|---|---|---|
+| 33 | **Reddy et al., 2022** — "Spectral efficient modem design with OTFS modulation for vehicular-IoT system" | Reduced guard pilot | Уменьшение guard pilot в ZP-OTFS; guard size зависит от channel delay spread |
+| 34 | **Wang et al., 2024** — "Reduced Guard Interval Orthogonal Frequency Division Multiplexing: A Soft Trade-Off Solution Toward Spectral Efficiency" | Dynamic guard shortening | Duration of delay spread rests with the transmission channel |
+| 35 | **Yuan et al., 2023** — "New delay Doppler communication paradigm in 6G era: A survey of orthogonal time frequency space (OTFS)" | Survey | Linear scaling of spectral efficiency, adaptive schemes без traditional spacing |
+| 36 | **Deng et al., 2025** — "A unifying view of OTFS and its many variants" | Survey | Discrete impulse pilots + null guard symbols вокруг пилотов |
+
+### 1.6. 3GPP каналы и V2X сценарии
+
+| # | Статья | Метод | Ключевая идея |
+|---|---|---|---|
+| 37 | **Chatzoulis et al., 2023** — "5G V2X performance comparison for different channel coding schemes and propagation models" | 3GPP V2X models | 5.9 GHz band + 3GPP 4G-LTE/5G-NR V2X channel models |
+| 38 | **Radovic, 2026** — "Vehicular Connectivity Based on Millimeter Wave Orthogonal Time Frequency Space Modulation" | 3GPP vehicular | OTFS + 3GPP vehicular channel model + 5.9 GHz legacy band |
+| 39 | **Rodriguez et al., 2025** — "6G-enabled vehicle-to-everything communications: Current research trends and open challenges" | Survey | 5.9 GHz band + Superimposed Training-OTFS (ST-OTFS) |
+
+### 1.7. Обзоры
 
 | # | Статья | Охват |
 |---|---|---|
-| 17 | **Aslandogan et al., 2025** — "Comprehensive Survey of CE for OTFS" | Bayesian, sparse recovery, message passing, NN — все подходы |
-| 18 | **Ozden et al., 2025** — "OTFS Index Modulation Survey" | Index modulation + estimation при imperfect CSI |
+| 40 | **Aslandogan et al., 2025** — "Comprehensive Survey of CE for OTFS" | Bayesian, sparse recovery, message passing, NN — все подходы |
+| 41 | **Ozden et al., 2025** — "OTFS Index Modulation Survey" | Index modulation + estimation при imperfect CSI |
 
 ---
 
@@ -118,32 +151,44 @@ L_guard_delay = 14, L_guard_dopp = 10
 
 ## Часть 4. Что НЕ решено в литературе (окна для научной новизны)
 
-### 4.1. Адаптивная guard-зона (не решено)
+### 4.1. Адаптивная guard-зона на основе реального delay spread (частично решено)
 
-**Проблема:** Все работы используют фиксированную guard-зону, но fractional spreading
-зависит от скорости и задержки.
+**Проблема:** Большинство работ используют фиксированную guard-зону.
+Reddy et al. (2022, #33) предложили уменьшение guard pilot, где "guard pilot size
+depends on the channel's delay spread" — но без аналитической формулы.
+Deng et al. (2025, #20) — "dynamically adjusting the pilot guard bands" для LEO satellite,
+но не для наземных V2X сценариев.
 
-**Идея:** Адаптивная guard-зона, вычисляемая из оценки максимального Doppler:
+**Наш подход:** Аналитический расчёт guard-зоны из **реального delay spread**,
+извлечённого из каналов QuaDRiGa (3GPP 38.901), а не из табличных worst-case значений.
 ```
-L_guard_dopp = ceil(|ν̃_max| + margin)
-L_guard_delay = ceil(|τ̃_max| + margin)
+L_guard_dopp  = ceil(ν̃_spread(v)) + N_sidelobe(SNR)
+L_guard_delay = ceil(τ̃_90% / Δτ) + M_sidelobe
 ```
-где ν̃_max оценивается из coarse Doppler spectrum до полной оценки канала.
+где τ̃_90% извлекается из реальных каналов (median по 100 RX QuaDRiGa).
 
-**Новизна:** Нет работ, которые бы динамически оптимизировали guard-зону
-на основе предварительной оценки канала. Все используют фиксированные значения.
+**Новизна:**
+- Reddy et al. (#33) — общая идея, без формул
+- Deng et al. (#20) — для LEO satellite, другой канал
+- **Мы:** первый аналитический метод для наземных 3GPP сценариев (UMi/UMa/RMa)
+  с валидацией через QuaDRiGa, показывающий +8.9%...+20.6% spectral efficiency
 
-### 4.2. Pulse shaping для уменьшения sidelobes (частично решено)
+### 4.2. FRFT-SIC для оценки канала (не решено)
 
-**Проблема:** Zak-OTFS с Hermite pulse (статьи 10, 12) решает sidelobe проблему,
-но требует полного redesign TX/RX цепочки.
+**Проблема:** Существующие методы:
+- SBL (Qi #4, Cao #5, Zheng #13) — высокая сложность O(N³)
+- Prony (Jitsumatsu #1) — чувствителен к шуму
+- Message passing (Liu #10) — требует априорного знания числа путей
+- Deep learning (Zhang #29, Lei #30) — требует обучения, неинтерпретируемы
 
-**Идея:** **Hybrid pulse shaping** — стандартный rectangular pulse на TX,
-но **receive-side windowing** с оптимизированным окном, которое минимизирует
-sidelobes Dirichlet kernel без изменения TX.
+**Наш подход:** **Fractional Fourier Transform + Successive Interference Cancellation**
+- FRFT как обобщение FFT с параметром угла вращения α
+- SIC — последовательное вычитание оценённых путей
+- LMMSE с truncated-SVD floor для стабилизации
 
-**Новизна:** Существующие работы (Sanoopkumar, Jesbin) меняют TX.
-Приёмное окно с аналитически оптимизированными коэффициентами для OTFS — менее изучено.
+**Новизна:** FRFT не применялся для OTFS channel estimation в найденной литературе.
+Все методы используют стандартный DFT/FFT или SBL. FRFT позволяет напрямую
+оценивать fractional delay/Doppler без oversampling или grid refinement.
 
 ### 4.3. Joint frame design + channel estimation (не решено)
 
@@ -157,35 +202,54 @@ sidelobes Dirichlet kernel без изменения TX.
 4. Repeat until convergence
 
 **Новизна:** Нет работ с обратной связью между оценкой канала и дизайном кадра.
+Wu et al. (#19) — "buffer band replacement" но без обратной связи с CE алгоритмом.
 
-### 4.4. FRFT + Prony hybrid (не решено)
+### 4.4. QuaDRiGa-based валидация для OTFS (не решено)
 
-**Проблема:** FRFT-SIC (положение 3) — greedy поиск на сетке. Prony (Jitsumatsu) —
-аналитический, но чувствителен к шуму.
+**Проблема:** Большинство работ используют стохастические каналы (Rayleigh, Rician)
+или упрощённые 3GPP модели (TDL, CDL). V2X-специфичные каналы:
+- Zheng et al. (#13) — 3GPP V2X, но GAMP-SBL, не FRFT
+- Chatzoulis et al. (#37) — 5.9 GHz, но сравнение coding schemes, не CE
+- Radovic (#38) — mmWave OTFS + 3GPP, но 2026, фокус на throughput
 
-**Идея:** **Prony для coarse оценки → FRFT fine search** — комбинация:
-- Prony даёт начальное приближение без поиска
-- FRFT fine search уточняет с учётом шума
-- Joint LS устраняет bias
+**Наш подход:** Полная валидация на **QuaDRiGa v2.8.1** (3GPP 38.901)
+с извлечением реальных параметров канала (delay spread, Doppler spread)
+из сгенерированных импульсных характеристик.
 
-**Новизна:** Никто не комбинировал Prony + FRFT для OTFS.
+**Новизна:** Первая работа, которая:
+1. Использует QuaDRiGa для OTFS CE валидации на 5.9 GHz
+2. Извлекает median delay spread из реальных каналов (не табличные значения)
+3. Сравнивает 3 сценария (UMi/UMa/RMa NLOS) с едиными параметрами OTFS
 
-### 4.5. Spectral efficiency analysis с fractional (не решено)
+### 4.5. Pulse shaping для уменьшения sidelobes (частично решено)
+
+**Проблема:** Zak-OTFS с Hermite pulse (статьи 21, 23) решает sidelobe проблему,
+но требует полного redesign TX/RX цепочки.
+
+**Идея:** **Hybrid pulse shaping** — стандартный rectangular pulse на TX,
+но **receive-side windowing** с оптимизированным окном, которое минимизирует
+sidelobes Dirichlet kernel без изменения TX.
+
+**Новизна:** Существующие работы (Sanoopkumar, Jesbin) меняют TX.
+Приёмное окно с аналитически оптимизированными коэффициентами для OTFS — менее изучено.
+
+### 4.6. Spectral efficiency analysis с fractional (частично решено)
 
 **Проблема:** BER vs SNR показывает качество, но **spectral efficiency** (бит/с/Гц)
 с учётом guard-зоны, pilot power, fractional spreading — не анализировалась
-систематически.
+систематически. Yuan et al. (#35) — survey, упоминает "linear scaling of spectral
+efficiency" но без аналитической модели.
 
-**Идея:** Аналитическая модель spectral efficiency:
+**Наш подход:** Аналитическая модель spectral efficiency:
 ```
-η = (N_data · log2(M_mod)) / (N_total · (1 + α_guard + α_pilot))
+η = (N_data · log2(M_mod)) / (M·N)
 ```
-где α_guard и α_pilot — функции от fractional параметров.
+где N_data — функция от адаптивной guard-зоны, зависящей от сценария и SNR.
 
-**Новизна:** Нет работ, которые бы связывали fractional spreading напрямую
-с потерей spectral efficiency.
+**Результат:** Показано, что adaptive guard даёт +8.9%...+20.6% spectral efficiency
+при сохранении BER performance (QuaDRiGa-based валидация).
 
-### 4.6. Multi-frame tracking (не решено)
+### 4.7. Multi-frame tracking (не решено)
 
 **Проблема:** Все алгоритмы оценивают канал для одного кадра.
 Но в реальности канал меняется медленно — можно использовать информацию
