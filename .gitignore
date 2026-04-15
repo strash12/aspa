@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+venv/
+.env
+
+# MATLAB
+*.mexw64
+*.mexa64
+*.mat
+*.slxc
+slprj/
+
+# QuaDRiGa (большие файлы, не наши)
+documentation/quadriga_src/
+documentation/tutorials/
+documentation/quadriga_documentation_v2.8.1-0.pdf
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Claude
+.claude/
+hot_cache.md
+
+# Figures (большие PNG, можно перегенерировать)
+# position_1/fig_*.png
+
+# Результаты симуляций
+*.mat
